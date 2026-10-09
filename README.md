@@ -1,190 +1,176 @@
+PulseGuard – IoT-Based Heart Rate and Oxygen Monitoring System
 
+PulseGuard is an embedded systems project focused on health-related parameter monitoring and microcontroller peripheral interfacing. The project includes embedded C modules for communication protocols, display interfacing, timing, interrupts, and ESP-01 communication support.
 
-\# PulseGuard - IoT-Based Heart Rate and Oxygen Monitoring System
+This repository contains the project source code, Keil µVision project files, system block diagram, and output screenshots for documentation.
 
+📌 Project Overview
 
+The goal of PulseGuard is to explore embedded systems development and hardware interfacing for a health-monitoring application.
 
-\## Project Overview
+The project includes modules for UART, LCD, I2C, SPI, RTC, timers, interrupts, keypad interfacing, and ESP-01 communication.
 
+🎯 Objectives
+Develop embedded C modules for microcontroller peripheral interfacing.
+Demonstrate serial communication using UART.
+Interface an LCD display and keypad.
+Explore I2C and SPI communication protocols.
+Implement RTC, timer, and interrupt functionality.
+Support ESP-01-based communication.
+Document the system architecture and project outputs.
+✨ Key Features
+Modular embedded C source code.
+UART serial communication support.
+LCD and keypad interfacing.
+I2C and SPI peripheral communication.
+RTC and timer modules.
+Interrupt handling.
+ESP-01 communication support.
+System block diagram and output screenshots.
 
+Note: Actual heart-rate and SpO₂ sensing capabilities depend on the connected hardware and verified implementation.
 
-PulseGuard is an embedded systems project designed to monitor health-related parameters using microcontroller-based hardware and communication interfaces.
+🛠️ Technologies Used
+Component	Technology
+Programming languages	C and ARM Assembly
+Development environment	Keil µVision
+Project format	Keil µVision .uvproj
+Communication protocols	UART, I2C, SPI
+Display interfacing	LCD
+Input interfacing	Keypad
+Timing modules	RTC and timers
+Wireless communication support	ESP-01
+Hardware platform	Refer to the project configuration for the exact microcontroller
+🧩 System Block Diagram
 
+The following image documents the PulseGuard system architecture.
 
+!PulseGuard System Block Diagram
 
-The project source code includes modules for UART, LCD, I2C, SPI, RTC, timers, interrupts, keypad interfacing, and ESP-01 communication.
+📷 Project Output Screenshots
 
+The following images document project outputs and the data-uploading process.
 
+Data Uploading
 
-\## Objectives
+!PulseGuard Data Uploading
 
+Output Screenshot 1
 
+!PulseGuard Output 1
 
-\- Develop embedded C modules for peripheral interfacing.
+Output Screenshot 2
 
-\- Demonstrate serial communication using UART.
+!PulseGuard Output 2
 
-\- Interface LCD, keypad, RTC, and timer peripherals.
+Output Screenshot 3
 
-\- Explore I2C and SPI communication.
+!PulseGuard Output 3
 
-\- Support ESP-01-based communication functionality.
-
-
-
-\## Technologies Used
-
-
-
-\- \*\*Programming languages:\*\* C and ARM Assembly
-
-\- \*\*Development environment:\*\* Keil µVision project (`.uvproj`)
-
-\- \*\*Microcontroller platform:\*\* Confirm the exact controller from the project hardware and configuration
-
-\- \*\*Communication interfaces:\*\* UART, I2C, SPI
-
-\- \*\*Peripheral modules:\*\* LCD, keypad, RTC, timers, interrupts, and ESP-01
-
-
-
-\## Repository Structure
-
-
-
-```text
-
+📂 Repository Structure
 PulseGuard-IoT-Health-Monitoring/
-
 ├── README.md
-
 ├── .gitignore
+├── doc/
+│   └── images/
+│       ├── block-diagram/
+│       │   └── PulseGuard_Block_Diagram.jpg.jpeg
+│       └── output-photos/
+│           ├── output-imag-datauploading.jpeg
+│           ├── output-imag1.jpeg
+│           ├── output-imag2.jpeg
+│           └── output-imag3.jpeg
+└── majorproject_test/
+    ├── majorproject_test.uvproj
+    ├── main_pg.c
+    ├── main_test.c
+    ├── project_pg.h
+    ├── all_defines.h
+    ├── lcd.c
+    ├── uart0.c
+    ├── i2c.c
+    ├── spi.c
+    ├── rtc.c
+    ├── timer0.c
+    ├── Timer1.c
+    ├── kpm.c
+    ├── esp01.c
+    └── ...
+
+
+The structure above summarizes the known project files. Additional files may exist in the repository.
+
+📦 Software Requirements
+Keil µVision compatible with the supplied project configuration.
+The appropriate device support package and compiler toolchain.
+Compatible microcontroller hardware for hardware testing.
+Required peripheral modules and connections, depending on the features being tested.
+🚀 Getting Started
+1. Clone the Repository
+
+Open Git Bash and run:
+
+git clone https://github.com/harsharamisetti18/PulseGuard-IoT-Health-Monitoring.git
+
+2. Navigate to the Project Folder
+cd PulseGuard-IoT-Health-Monitoring
+
+3. Open the Keil Project
+
+Open the following project file using a compatible Keil µVision installation:
+
+majorproject_test/majorproject_test.uvproj
+
+4. Verify Project Configuration
+
+Before building the project:
+
+Check the configured microcontroller and target device.
+Verify the compiler and toolchain settings.
+Confirm that all required source files are included.
+Review the peripheral connections and hardware configuration.
+5. Build and Test
+
+Build the project in Keil µVision. If compatible hardware is available, test the implemented modules and verify their outputs.
+
+Exact hardware connections, sensor configuration, and build steps should be confirmed against the project source code and circuit design.
+
+📑 Project Modules
+File	Purpose
+main_pg.c	Main project source; verify the implemented functions in the source code
+main_test.c	Test-related source file
+project_pg.h	Project header file
+all_defines.h	Project definitions and configuration
+uart0.c	UART communication
+lcd.c	LCD interfacing
+i2c.c	I2C communication
+spi.c	SPI communication
+rtc.c	Real-time clock interfacing
+timer0.c	Timer functionality
+Timer1.c	Timer functionality
+kpm.c	Keypad interfacing
+esp01.c	ESP-01 communication support
+
+Module descriptions are based on filenames and should be checked against the source code.
+
+🔮 Future Enhancements
+Integrate and validate heart-rate and SpO₂ sensor readings using compatible sensors.
+Develop an IoT dashboard for remote health-data visualization.
+Implement configurable alerts for abnormal readings.
+Improve wireless data transmission and monitoring.
+Document circuit connections and hardware requirements.
+Add detailed module-level documentation and verified test results.
+Improve error handling and communication reliability.
+⚠️ Disclaimer
+
+PulseGuard is an educational embedded systems project. It is not a certified medical device and must not be used for medical diagnosis, treatment, or emergency decision-making. Any health-related readings must be validated using appropriate equipment and methods.
+
+👨‍💻 Author
+
+Harsha
+
+GitHub: @harsharamisetti18
+
+📄 License
 
-└── majorproject\_test/
-
-&#x20;   ├── majorproject\_test.uvproj
-
-&#x20;   ├── main\_pg.c
-
-&#x20;   ├── main\_test.c
-
-&#x20;   ├── project\_pg.h
-
-&#x20;   ├── all\_defines.h
-
-&#x20;   ├── lcd.c
-
-&#x20;   ├── uart0.c
-
-&#x20;   ├── i2c.c
-
-&#x20;   ├── spi.c
-
-&#x20;   ├── rtc.c
-
-&#x20;   ├── timer0.c
-
-&#x20;   ├── Timer1.c
-
-&#x20;   ├── kpm.c
-
-&#x20;   ├── esp01.c
-
-&#x20;   └── ...
-
-```
-
-
-
-\## Software Requirements
-
-
-
-\- Keil µVision compatible with the project configuration
-
-\- The appropriate device support package and toolchain
-
-\- Compatible microcontroller hardware for testing
-
-
-
-\## How to Open the Project
-
-
-
-1\. Clone or download this repository.
-
-2\. Open `majorproject\_test/majorproject\_test.uvproj` in a compatible Keil µVision installation.
-
-3\. Check the target device, toolchain, and project settings.
-
-4\. Review the source files and required hardware connections.
-
-5\. Build the project and test it on compatible hardware.
-
-
-
-\## Project Modules
-
-
-
-| Module | Purpose |
-
-|---|---|
-
-| `uart0.c` | UART communication |
-
-| `lcd.c` | LCD interfacing |
-
-| `i2c.c` | I2C communication |
-
-| `spi.c` | SPI communication |
-
-| `rtc.c` | Real-time clock interfacing |
-
-| `timer0.c`, `Timer1.c` | Timer functionality |
-
-| `kpm.c` | Keypad interfacing |
-
-| `esp01.c` | ESP-01 communication support |
-
-
-
-Module descriptions are based on filenames and should be verified against the source code.
-
-
-
-\## Future Enhancements
-
-
-
-\- Integrate and document validated heart-rate and SpO2 sensor readings.
-
-\- Add an IoT dashboard for remote monitoring.
-
-\- Implement configurable alerts for abnormal readings.
-
-\- Include circuit diagrams, hardware photographs, and demonstration results.
-
-\- Add verified setup instructions and test results.
-
-
-
-\## Disclaimer
-
-
-
-This project is intended for educational and prototyping purposes. It is not a certified medical device and should not be used for medical diagnosis or treatment.
-
-
-
-\## Author
-
-
-
-\*\*Harsha\*\*
-
-
-
-GitHub: \[@harsharamisetti18](https://github.com/harsharamisetti18)
-
+No license is specified in this repository. Unless a license is added, reuse and redistribution are subject to applicable copyright law.
