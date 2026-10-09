@@ -1,0 +1,17 @@
+# compiled object and intermediate files
+*.O
+*.d
+*.crf
+*.lst
+*.map
+*.axf
+*.hex
+*.bin
+*.elf
+# keil build output and logs
+*.htm
+*.plg
+*.tra
+*.dep
+*.bak
+*.uvopt
